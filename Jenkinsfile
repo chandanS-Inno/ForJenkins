@@ -12,5 +12,10 @@ pipeline{
                 sh "python test_calc.py"
             }
         }
+        stage("Schedule build"){
+            triggers{
+                cron(30 8 10 11 *)
+            }
+        }
     }
 }
