@@ -1,11 +1,10 @@
 pipeline{
     agent any
-    stages {
-        stage("Schedule build"){
-            triggers{
+    triggers{
                 cron('35 09 27 10 *')
             }
-        }
+    stages {
+        
         stage("Compile") {
             steps {
                 //pip install requirements.txt
