@@ -3,7 +3,7 @@ pipeline{
     stages {
         stage("Schedule build"){
             triggers{
-                cron(35 09 27 10 *)
+                cron('35 09 27 10 *')
             }
         stage("Compile") {
             steps {
